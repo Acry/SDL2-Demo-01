@@ -1,5 +1,5 @@
-###SDL2 Demo 01  
-
+SDL2 Demo 01  
+============  
 [Simple DirectMedia Layer](https://www.libsdl.org/) is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.  
 
 This is a small SDL2-C Demo and it does demonstrate how...  

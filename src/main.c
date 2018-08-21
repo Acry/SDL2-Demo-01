@@ -22,6 +22,8 @@
  * TODO copy window surface to texture during idle
  * 	and move it like a flag in the wind
  * 
+ * TODO open links on Windows
+ * ShellExecute(NULL, "open", "http://url", NULL, NULL, SW_SHOWNORMAL);
  */
 //END   DESCRIPTION
 
@@ -43,7 +45,7 @@
 
 //BEGIN GLOBALS
 int ww=540;
-int wh=540;
+int wh=340;
 
 //BEGIN TIMING
 Uint32 frame_time  = 0;
@@ -201,7 +203,7 @@ SDL_RenderCopy(Renderer, text3, NULL, &text3_dst);
 if (chunk_played_in==2)
 	SDL_RenderCopy(Renderer, octoface, NULL, &octoface_dst);
 
-if (chunk_played_in !=0 && timer>1500){
+if (chunk_played_in !=0 && timer>800){
 	switch(chunk_played_in){
 		case 1:
 			link1_tp_dst.x=mouse.x-link1_tp_dst.w/2;
@@ -350,7 +352,7 @@ void assets_in(void)
 	
 	//BEGIN TEXT2
 	font=TTF_OpenFont("./assets/fonts/NimbusSanL-Regu.ttf", 22);
-	temp_surface=TTF_RenderText_Blended(font,"Author's SDL2 Repositories",black);
+	temp_surface=TTF_RenderText_Blended(font,"SDL2-C-Tutorials",black);
 	text2 = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(text2, NULL, NULL, &text2_dst.w, &text2_dst.h);
 	text2_dst.x=text1_dst.x+2;
@@ -359,7 +361,7 @@ void assets_in(void)
 	
 	//BEGIN TEXT2_TP
 	font=TTF_OpenFont("./assets/fonts/NimbusSanL-Regu.ttf", 15);
-	temp_surface=TTF_RenderText_Blended(font," Author's SDL2 Repos ",black);
+	temp_surface=TTF_RenderText_Blended(font," SDL2-C-Tutorials ",black);
 	text2_tp= SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(text2_tp, NULL, NULL, &text2_tp_dst.w, &text2_tp_dst.h);
 	//END 	TEXT2_TP
@@ -473,7 +475,7 @@ void open_link(void)
 			system("xdg-open https://github.com/Acry/SDL2-Demo-01");
 			break;
 		case 4:
-			system("xdg-open \"https://github.com/Acry?&tab=repositories&q=SDL2\"");
+			system("xdg-open \"https://acry.github.io/\"");
 			break;
 		case 5:
 			system("xdg-open https://discourse.libsdl.org/u/Acry/");
