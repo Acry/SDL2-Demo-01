@@ -15,7 +15,7 @@ This is a small SDL2 Demo and it does demonstrate how...
   * to create tooltips  
 
 Useful links:  
-[SDL2](https://www.libsdl.org/) [SDL-Discourse](https://discourse.libsdl.org)
+[SDL2-C-Tutorials](https://acry.github.io/) | [SDL2](https://www.libsdl.org/) | [SDL-Discourse](https://discourse.libsdl.org)
 
 Screenshot:  
 ![Screenshot](./screenshot.png)
